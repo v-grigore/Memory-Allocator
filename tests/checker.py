@@ -251,7 +251,6 @@ def runTest(testName):
     env = os.environ.copy()
     src = os.environ.get("SRC_PATH", "../src")
     env["LD_LIBRARY_PATH"] = src
-    print(env["LD_LIBRARY_PATH"])
     proc = Popen(["ltrace", "-F", ".ltrace.conf", "-S", "-x", "os_*", f"{bin}"], stdout=PIPE, stderr=PIPE, env=env)
     _, stderr = proc.communicate()
 
