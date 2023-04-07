@@ -291,4 +291,4 @@ if __name__ == "__main__":
         if grade(testName):
             total += TESTS[testName]
 
-    print(f"\nGrade" + " " * 28 + "." * 34 + f" {(total/10):.2f}", file=sys.stderr)
+    print(f"\nTotal:" + " " * 59 + f" {total}/100", file=sys.stderr)
