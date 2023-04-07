@@ -187,6 +187,7 @@ docker_interactive() {
     cp -R ./* "$tmpdir"
     cp ./.checkpatch.conf "$tmpdir"
     cp ./.shellcheckrc "$tmpdir"
+    cp ./.pylintrc "$tmpdir"
 
     docker run --rm -it \
             --mount type=bind,source="$tmpdir",target="$MOUNT_PROJECT_DIRECTORY" \
@@ -246,6 +247,7 @@ checker_main() {
     cp -R ./* "$tmpdir"
     cp ./.checkpatch.conf "$tmpdir"
     cp ./.shellcheckrc "$tmpdir"
+    cp ./.pylintrc "$tmpdir"
 
     LOG_INFO "Running checker..."
 
