@@ -5,3 +5,4 @@ RUN mkdir ${CHECKER_DATA_DIRECTORY}/../tests
 COPY ./tests ${CHECKER_DATA_DIRECTORY}/../tests
 RUN mkdir ${CHECKER_DATA_DIRECTORY}/../utils
 COPY ./utils ${CHECKER_DATA_DIRECTORY}/../utils
+COPY ./.pylintrc ${CHECKER_DATA_DIRECTORY}/..
