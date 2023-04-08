@@ -142,7 +142,7 @@ def parse_ltrace_output(ltrace_output: str):
     exit_status = ltrace_output.splitlines()[-1:]
     for line in ltrace_output.splitlines():
         if 'DBG' in line:
-            exit_status = line[line.rfind('DBG:'):line.rfind(')')] + exit_status
+            exit_status = [line[line.rfind('DBG:'):line.rfind(')')]] + exit_status
 
     # Store addresses
     heap_addresses = {}
